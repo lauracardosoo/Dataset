@@ -1,0 +1,139 @@
+. Revisão do Processo Completo
+
+Durante o desenvolvimento do projeto, seguimos cinco fases:
+
+Exploração inicial do dataset
+
+Identificação das variáveis
+
+Verificação de outliers
+
+Entendimento do comportamento das notas dos estudantes
+
+Pré-processamento e limpeza
+
+Transformação de variáveis categóricas
+
+Separação entre preditores e variável-alvo
+
+Padronização da estrutura do dataset
+
+Treinamento dos primeiros modelos
+
+Regressão Linear tradicional como baseline
+
+Avaliação inicial de desempenho no conjunto de teste
+
+Otimização dos modelos
+
+Teste de versões regularizadas (Ridge e Lasso)
+
+Uso de Grid Search para ajuste de hiperparâmetros
+
+Seleção do melhor modelo baseado no MSE
+
+Validação final e análise dos resultados
+
+Interpretação dos erros
+
+Discussão sobre limitações
+
+Reflexão sobre a precisão alcançada
+
+⭐ 2. Modelo Final Selecionado
+
+Após os experimentos da Etapa 4, o modelo escolhido foi:
+
+✔ Ridge Regression com alpha = 10
+
+Este modelo apresentou:
+
+Melhor equilíbrio entre erro e estabilidade
+
+Consistência nos resultados da validação cruzada
+
+Baixa sensibilidade a ruídos das variáveis
+
+O desempenho final no conjunto de teste permitiu prever a nota-alvo com boa precisão, mantendo erros distribuídos de maneira uniforme.
+
+📉 3. Interpretação do Desempenho
+
+O modelo conseguiu capturar relações relevantes entre as variáveis do dataset.
+
+A regularização L2 foi essencial para reduzir oscilações e diminuir overfitting.
+
+A magnitude dos resíduos indica que o modelo se adapta de forma razoável à estrutura dos dados.
+
+Entretanto:
+
+Algumas variáveis categóricas podem carregar ruído ou pouca relevância preditiva.
+
+Não foram aplicados modelos não lineares, que poderiam capturar padrões mais complexos.
+
+O dataset possui limitações estruturais (ex.: notas arredondadas, possíveis viéses sociais).
+
+🔍 4. Limitações Encontradas
+
+Modelo linear
+Pode não capturar relações mais complexas entre as variáveis.
+
+Dependência do pré-processamento
+Transformações de categorias afetam diretamente o resultado.
+
+Dataset com informações sensíveis
+Algumas variáveis podem introduzir tendências não desejadas.
+
+Escassez de atributos
+Faltam informações importantes sobre hábitos de estudo, perfil emocional, entre outros fatores que impactam desempenho acadêmico.
+
+🚀 5. Sugestões para Trabalhos Futuros
+🔧 Explorar novos modelos
+
+Random Forest
+
+Gradient Boosting
+
+XGBoost
+
+Modelos não lineares podem gerar resultados superiores.
+
+📊 Aprimorar o pré-processamento
+
+Testar normalizações diferentes
+
+Reduzir dimensionalidade com PCA
+
+🧪 Realizar experimentos avançados
+
+Testar otimização com Random Search
+
+Aplicar técnicas de regularização elástica (ElasticNet)
+
+📈 Analisar impactos das variáveis
+
+Testes de importância por SHAP
+
+Avaliação interpretável do modelo
+
+📁 Entregáveis desta Etapa
+
+Os arquivos gerados nesta etapa foram:
+
+✔ notebooks/05_Conclusoes.ipynb
+
+Contém toda a análise final.
+
+✔ models/modelo_final.joblib
+
+Modelo selecionado na Etapa 4, já salvo e pronto para uso.
+
+✔ README atualizado com o resumo da etapa
+
+Inclui as conclusões principais e os próximos passos sugeridos.
+
+🧾 Conclusão Geral
+
+O projeto permitiu desenvolver um modelo preditivo funcional para analisar o desempenho dos estudantes.
+Embora a Regressão Linear regularizada tenha alcançado bons resultados, há espaço para abordagens mais robustas em trabalhos futuros.
+
+O modelo final se mostrou adequado, estável e interpretável, cumprindo bem os requisitos propostos
